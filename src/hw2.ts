@@ -27,6 +27,12 @@ class Lamborghini extends Car {
 
     public drive(value: number): void {
         
+        if (!value) {
+            return console.log("Значение не пердано");
+        }
+        if(typeof value !== number) {
+            return console.log("Передано неверное значение");
+        
         this._mileage += value;
         this._fuel--;
 
