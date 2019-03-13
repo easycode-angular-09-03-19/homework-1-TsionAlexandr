@@ -13,18 +13,10 @@ console.log(factorial(5));
 // Задача 2
 
 
-function multiply(): number {
-    if(!arguments.length) return 0; 
-    
-    let a = 1;
+function multiply(...numbers: number[]): number {
+    if (numbers.length == 0) return 0;
 
-    for(let i = 0; i < arguments.length; i++){
-        if (typeof arguments[i] === 'number') {
-            a *= arguments[i];
-        }
-    }
-
-    return a;
+    return numbers.reduce((a, b) => a * b);
 }
 
 
